@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
 from __future__ import division
 import healpy as hp
 import numpy as np
@@ -29,16 +23,8 @@ cmap.set_bad('gray')
 from IPython.core.display import display, HTML
 display(HTML("<style>.container { width:100% !important; }</style>"))
 
-
-# In[2]:
-
-
 file = readsav('/hpcdata3/ariekuks/2019_02_28/sim_vars/bahamas/power_spectra/BAHAMAS_subfind_y_z_lt_0p15_image_ngp_0p008z0p150_logM11p0_fov25_smooth_20_ntot+nq+fq_rebin+ms+beam+noise.sav')
 #print file.keys()
-
-
-# In[ ]:
-
 
 ra_t = np.arange(0.0, 25.0, 25.0/9000)
 dec_t = np.arange(0.0, 25.0, 25.0/9000)
@@ -112,10 +98,6 @@ for i in range(0, len(in_points_d)): # loop over each one, locating its value an
                                                     # replace sum/j by a desired operation, such as just sum.
 hp.mollview(m, title='BAHAMAS tSZ', cmap=cmap) # display this map
 plt.show()
-
-
-# In[ ]:
-
 
 map_max = 2e-5
 map_min = 1e-10
